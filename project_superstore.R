@@ -302,7 +302,9 @@ customer_purchase_gaps <- df %>%
     .groups = "drop"
   ) %>%
   mutate(
-    days_since_last = as.numeric(Sys.Date() - last_purchase)
+    # days_since_last = as.numeric(Sys.Date() - last_purchase) -> if the dataset was current I would use this line
+    days_since_last = as.numeric(max_date - last_purchase)
+    
   )
 # print(customer_purchase_gaps)
 
@@ -318,18 +320,18 @@ at_risk_customers <- customer_purchase_gaps %>%
 # print(at_risk_customers)
 # These Customers could be targeted with a discount:
 
-    # Customer.ID purchases avg_gap last_purchase days_since_last
+    #    Customer.ID purchases avg_gap last_purchase days_since_last
     #    <chr>           <int>   <dbl> <date>                  <dbl>
-    #  1 GR-14560            5     0.5 2014-11-21               3885
-    #  2 CM-12715           13    29.9 2015-03-01               3785
-    #  3 VT-21700            9    37.9 2015-04-05               3750
-    #  4 PC-19000            3   240   2015-08-01               3632
-    #  5 AG-10525            9    49.2 2015-09-07               3595
-    #  6 PF-19120           19    27.8 2015-09-17               3585
-    #  7 DP-13165            4   104   2015-10-10               3562
-    #  8 CC-12685           12    52.7 2015-10-23               3549
-    #  9 SC-20020           17    38.6 2015-11-10               3531
-    # 10 LS-17230            6   135.  2015-11-14               3527
+    #  1 GR-14560            5     0.5 2014-11-21               1135
+    #  2 CM-12715           13    29.9 2015-03-01               1035
+    #  3 VT-21700            9    37.9 2015-04-05               1000
+    #  4 PC-19000            3   240   2015-08-01                882
+    #  5 AG-10525            9    49.2 2015-09-07                845
+    #  6 PF-19120           19    27.8 2015-09-17                835
+    #  7 DP-13165            4   104   2015-10-10                812
+    #  8 CC-12685           12    52.7 2015-10-23                799
+    #  9 SC-20020           17    38.6 2015-11-10                781
+    # 10 LS-17230            6   135.  2015-11-14                777
 
 
 # Suggest marketing approaches for "High Spenders"
