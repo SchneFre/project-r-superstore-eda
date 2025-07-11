@@ -390,7 +390,7 @@ print(profit_per_order)
 ## Extra Challenge
 # Identify 3 actionable business recommendations.
 #   - target at Risk customers with discounts
-#   - create a VIP early access programm for high spenders
+#   - create a VIP early access programm for highly profitable Customers
 #   - increase margins or leave areas with negativ net profit
 
 # Propose 2 new questions for deeper analysis.
