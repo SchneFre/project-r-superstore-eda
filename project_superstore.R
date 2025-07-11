@@ -383,3 +383,20 @@ print(profit_per_order)
 # that the absolute sales price is higher. The average margin is highest in Second Class delivery, 
 # but Items delivered in this class tend to have lower Prices to begin with.
 # I would recommend focussing on the most profitable items
+
+
+
+##############################################################################
+## Extra Challenge
+# Identify 3 actionable business recommendations.
+#   - target at Risk customers with discounts
+#   - create a VIP early access programm for high spenders
+#   - increase margins or leave areas with negativ net profit
+
+# Propose 2 new questions for deeper analysis.
+#   - Which Items cause negative net profit in the cities with negative net profit and should they be taken out of stock?
+#   - External sources: How high is the customer aquiration cost compared to retaining an existing customer?
+
+# Estimate potential financial impact of your recommendations.
+# There should be a positive financital impact, if the items with negative net profit are taken out of stock.
+# Only accept negative net profit for any given item in order to prevent customer churn
